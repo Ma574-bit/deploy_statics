@@ -26,9 +26,8 @@ SECRET_KEY = 'django-insecure-k-k(55d#i$deel99!bf3l1s*k%ow_subso(icjpa#gg!^1pz2b
 DEBUG = True
 ALLOWED_HOSTS = [
     'deploy-statics-y73o-4ye99ex1x-taenthais-projects.vercel.app',
-    'deploy-statics-y73o-git-main-taenthais-projects.vercel.app',
-    '127.0.0.1',
     'localhost',
+    '127.0.0.1',
 ]
 
 
