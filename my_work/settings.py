@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-@lcs63k4s21g633+5c87c-o!d0s9$-q#q%f7^_k2v-vfd&cy$t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'deploy-statics-y73o-4ye99ex1x-taenthais-projects.vercel.app',
+    'deploy-statics-y73o-git-main-taenthais-projects.vercel.app',
+    '127.0.0.1',
+    'localhost',
+]
+
 
 
 
@@ -119,12 +125,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'statics']
-STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
+STATIC_URL = 'static/'
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'statics')]
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
